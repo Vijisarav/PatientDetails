@@ -7,9 +7,7 @@ namespace PateintDetail
 {
     public static class Authenticate
     {
-        //public string Token { get; set; }
-
-        private static string Secret_Key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6InZpaml3ZXJ0eSIsImlhdCI6MTUxNjIzOTAyMn0.e4OkVAqo8sDl29LNLXFtcPZztsyb5wYXv7wZYh3-UA0";
+        private static string Secret_Key = "eSIsImlhdCI6MTUxNjIzOb5wYXv7wZYh3-UA0";
         public static SymmetricSecurityKey signinKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Secret_Key));
         public static string TokenGenerations()
         {

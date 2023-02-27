@@ -2648,11 +2648,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\OneDrive - Flyers Soft Pvt Ltd\\PateintDetail\\PateintDetail\\PateintDetail.csproj",
+      "projectUniqueName": "D:\\PateintDetail\\PateintDetail\\PateintDetail.csproj",
       "projectName": "PateintDetail",
-      "projectPath": "D:\\OneDrive - Flyers Soft Pvt Ltd\\PateintDetail\\PateintDetail\\PateintDetail.csproj",
+      "projectPath": "D:\\PateintDetail\\PateintDetail\\PateintDetail.csproj",
       "packagesPath": "C:\\Users\\vijayalakshmi.s\\.nuget\\packages\\",
-      "outputPath": "D:\\OneDrive - Flyers Soft Pvt Ltd\\PateintDetail\\PateintDetail\\obj\\",
+      "outputPath": "D:\\PateintDetail\\PateintDetail\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\vijayalakshmi.s\\AppData\\Roaming\\NuGet\\NuGet.Config",

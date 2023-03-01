@@ -12,11 +12,11 @@ namespace PateintDetail
         {
             this.configuration = configuration;
         }
-        public List<Patientdetails> JsonSerialize()
+        public List<Patientdetails>? JsonSerialize()
         {
             var json = File.ReadAllText(configuration["Json:D"]);
             var getallpatientdetails = JsonConvert.DeserializeObject<List<Patientdetails>>(json);
-            return getallpatientdetails!;
+            return getallpatientdetails;
 
         }
     }
@@ -25,9 +25,9 @@ namespace PateintDetail
 
 
 
-           
 
 
 
 
-    
+
+

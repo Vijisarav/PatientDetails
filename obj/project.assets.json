@@ -2670,11 +2670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PateintDetail\\PateintDetail\\PateintDetail.csproj",
+      "projectUniqueName": "C:\\Users\\vijayalakshmi.s\\source\\repos\\PateintDetail\\PateintDetail\\PateintDetail.csproj",
       "projectName": "PateintDetail",
-      "projectPath": "D:\\PateintDetail\\PateintDetail\\PateintDetail.csproj",
+      "projectPath": "C:\\Users\\vijayalakshmi.s\\source\\repos\\PateintDetail\\PateintDetail\\PateintDetail.csproj",
       "packagesPath": "C:\\Users\\vijayalakshmi.s\\.nuget\\packages\\",
-      "outputPath": "D:\\PateintDetail\\PateintDetail\\obj\\",
+      "outputPath": "C:\\Users\\vijayalakshmi.s\\source\\repos\\PateintDetail\\PateintDetail\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\vijayalakshmi.s\\AppData\\Roaming\\NuGet\\NuGet.Config",

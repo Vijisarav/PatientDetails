@@ -4,9 +4,9 @@ namespace PateintDetail.Repository
 {
    public interface IPatientServices
     {
-        List<Patientdetails> GetAllPatientdetails();
-        Patientdetails GetByIdPatientdetails(Guid id);
-       // string TokenGenerations(TokenGeneration tokenGeneration);
-        Patientdetails TokenGenerations(TokenGeneration tokenGeneration);
+        List<Patientdetails> ?GetAllPatientdetails();
+        Patientdetails? GetByIdPatientdetails(Guid id);
+        string TokenGenerations(TokenGeneration tokenGeneration);
+       
     }
 }

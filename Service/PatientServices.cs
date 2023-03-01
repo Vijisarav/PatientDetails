@@ -1,7 +1,6 @@
 ﻿using Microsoft.IdentityModel.Tokens;
 using PateintDetail.Model;
 using System.IdentityModel.Tokens.Jwt;
-
 using System.Text;
 
 namespace PateintDetail.Repository
@@ -16,20 +15,16 @@ namespace PateintDetail.Repository
             _json = jsonSerialization;
         }
       
-        public List<Patientdetails> GetAllPatientdetails()
+        public List<Patientdetails>? GetAllPatientdetails()
         {
-            var response = _json.JsonSerialize();
-            return response;
+            var getallpatientdetails = _json.JsonSerialize();
+            return getallpatientdetails;
         }
-        public Patientdetails GetByIdPatientdetails(Guid id)
+        public Patientdetails? GetByIdPatientdetails(Guid id)
         {
             var response = _json.JsonSerialize();
-            var res = response.FirstOrDefault(x => x.Patientid == id);
-            if (res != null)
-            {
-                return res;
-            }
-            return new Patientdetails();
+            var getbyidpatientdetails = response!.FirstOrDefault(x => x.Patientid == id);
+            return getbyidpatientdetails;
         }
         public string TokenGenerations(TokenGeneration tokenGeneration)
         {
@@ -39,7 +34,11 @@ namespace PateintDetail.Repository
             JwtHeader header = new JwtHeader(signingCredentials);
             DateTime expiryTime = DateTime.UtcNow.AddMinutes(5);
            // int totalSeconds = (int)(expiryTime - new DateTime()).TotalSeconds;
-            JwtPayload payload = new JwtPayload();
+            JwtPayload payload = new JwtPayload()
+            {
+                { "Name","patient" },
+                { "email","patient" }
+            };
             JwtSecurityToken jwtSecurityTokenjwtSecurityToken = new JwtSecurityToken(header, payload);
             JwtSecurityTokenHandler jwtSecurityTokenHandler = new JwtSecurityTokenHandler();
             var jsonToken = jwtSecurityTokenHandler.WriteToken(jwtSecurityTokenjwtSecurityToken);

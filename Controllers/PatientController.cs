@@ -1,12 +1,10 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using PateintDetail.Model;
 using PateintDetail.Repository;
 
 namespace PateintDetail.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api")]
     [ApiController]
     public class PatientController : ControllerBase
     {
@@ -25,29 +23,20 @@ namespace PateintDetail.Controllers
         public IActionResult GetByIdPatientdetails(Guid id)
         {
             var getbyiddetails = _patientServices.GetByIdPatientdetails(id);
-           // var getById = _patientServices
             return Ok(getbyiddetails);
         }
         [AllowAnonymous]
         [HttpPost("get token")]
-        public string GetJwtToken(TokenGeneration tokenGeneration)
+        public IActionResult TokenGenerations(TokenGeneration tokenGeneration)
         {
-            //var user = new TokenGeneration { Email = tokenGeneration.Email, Password = tokenGeneration.Password };
-           // string user = null;
-            if(tokenGeneration.Email=="viji@gmail.com" && tokenGeneration.Password == "monkey")
+            if (tokenGeneration.Email == "viji@gmail.com" && tokenGeneration.Password == "monkey")
             {
-                var token = Authenticate.TokenGenerations();
-                return token;
-                
+                var gettoken = _patientServices.TokenGenerations(tokenGeneration);
+                return Ok(gettoken);
             }
-            
-            return "Invalid EmailId";
-           
-           
-           
+            return Unauthorized("Invalid user");
+            //return StatusCode(401, "Unauthorized");
         }
-
-
     }
 }
 

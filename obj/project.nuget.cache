@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "AWzpIixkI9P7NuV4JzJdXV2wVj/2Da9Owhwm+0Mgaac0uG4Pmkya93F8uLKPArkFHqM7ufr5j9lXfyBaJWc6og==",
+  "dgSpecHash": "e7QH0ZsUEGNzQnp6Rs+OYNrI1FmG888ZYkfET6qKh5gO3QwejSBSed13CmNe+xEv0DDxwc6u7nVFZRI3VUA4YQ==",
   "success": true,
   "projectFilePath": "D:\\PateintDetail\\PateintDetail\\PateintDetail.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vijayalakshmi.s\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\vijayalakshmi.s\\.nuget\\packages\\json.net\\1.0.33\\json.net.1.0.33.nupkg.sha512",
     "C:\\Users\\vijayalakshmi.s\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.14\\microsoft.aspnetcore.authentication.jwtbearer.6.0.14.nupkg.sha512",
     "C:\\Users\\vijayalakshmi.s\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\vijayalakshmi.s\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

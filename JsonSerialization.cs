@@ -16,7 +16,7 @@ namespace PateintDetail
         {
             var json = File.ReadAllText(configuration["Json:D"]);
             var getallpatientdetails = JsonConvert.DeserializeObject<List<Patientdetails>>(json);
-            return getallpatientdetails;
+            return getallpatientdetails!;
 
         }
     }

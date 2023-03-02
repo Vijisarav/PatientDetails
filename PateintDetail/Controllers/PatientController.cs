@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using PateintDetail.Repository;
+using PateintDetail.Repository.IPatientservices;
+
 
 namespace PateintDetail.Controllers
 {
@@ -8,10 +9,13 @@ namespace PateintDetail.Controllers
     [ApiController]
     public class PatientController : ControllerBase
     {
+        private readonly ILogger<PatientController> _logger;
         private readonly IPatientServices _patientServices;
-        public PatientController(IPatientServices patientServices)
+        public PatientController(IPatientServices patientServices, ILogger<PatientController> logger)
         {
             _patientServices = patientServices;
+            _logger = (ILogger<PatientController>)logger;
+            _logger = logger;
         }
         [HttpGet("Patient")]
         public IActionResult GetAllPatientdetails()
@@ -35,7 +39,6 @@ namespace PateintDetail.Controllers
                 return Ok(gettoken);
             }
             return Unauthorized("Invalid user");
-            //return StatusCode(401, "Unauthorized");
         }
     }
 }

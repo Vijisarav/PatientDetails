@@ -1,12 +1,11 @@
 ﻿using PateintDetail.Model;
 
-namespace PateintDetail.Repository
+namespace PateintDetail.Repository.IPatientservices
 {
-   public interface IPatientServices
+    public interface IPatientServices
     {
-        List<Patientdetails> ?GetAllPatientdetails();
+        List<Patientdetails>? GetAllPatientdetails();
         Patientdetails? GetByIdPatientdetails(Guid id);
         string TokenGenerations(TokenGeneration tokenGeneration);
-       
     }
 }

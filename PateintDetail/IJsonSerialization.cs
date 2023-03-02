@@ -1,9 +1,10 @@
-﻿using PateintDetail.Model;
+﻿using Newtonsoft.Json.Linq;
+using PateintDetail.Model;
 
 namespace PateintDetail
 {
     public interface IJsonSerialization
     {
-        List<Patientdetails>? JsonSerialize();
+        List<JObject> Jsondeserialize<JObject>();
     }
 }

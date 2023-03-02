@@ -1,6 +1,4 @@
 ﻿using Newtonsoft.Json;
-using PateintDetail.Model;
-
 
 namespace PateintDetail
 {
@@ -12,15 +10,17 @@ namespace PateintDetail
         {
             this.configuration = configuration;
         }
-        public List<Patientdetails>? JsonSerialize()
+        public List<JObject> ?Jsondeserialize<JObject>()
         {
             var json = File.ReadAllText(configuration["Json:C"]);
-            var getallpatientdetails = JsonConvert.DeserializeObject<List<Patientdetails>>(json);
+            var getallpatientdetails = JsonConvert.DeserializeObject<List<JObject>>(json);
             return getallpatientdetails;
 
         }
+
     }
 }
+
 
 
 

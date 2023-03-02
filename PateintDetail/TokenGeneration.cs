@@ -1,6 +1,4 @@
-﻿
-
-namespace PateintDetail
+﻿namespace PateintDetail
 {
     public class TokenGeneration
     {

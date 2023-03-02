@@ -1,29 +1,36 @@
 ﻿using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json.Linq;
 using PateintDetail.Model;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
+using PateintDetail.Controllers;
+using PateintDetail.Repository.IPatientservices;
 
-namespace PateintDetail.Repository
+namespace PateintDetail.Repository.Patientservices
 {
     public class PatientServices : IPatientServices
     {
         private readonly IJsonSerialization _json;
         private readonly IConfiguration _configuration;
-        public PatientServices(IConfiguration configuration, IJsonSerialization jsonSerialization)
+        private readonly ILogger<PatientController> _logger;
+
+        public PatientServices(IConfiguration configuration, IJsonSerialization jsonSerialization, ILogger<PatientController> logger)
         {
             _configuration = configuration;
             _json = jsonSerialization;
+            _logger = (ILogger<PatientController>)logger;
+            _logger = logger;
         }
-      
-        public List<Patientdetails>? GetAllPatientdetails()
+
+        public List <Patientdetails> GetAllPatientdetails()
         {
-            var getallpatientdetails = _json.JsonSerialize();
+            var getallpatientdetails = _json.Jsondeserialize<Patientdetails>();
             return getallpatientdetails;
         }
-        public Patientdetails? GetByIdPatientdetails(Guid id)
+        public Patientdetails GetByIdPatientdetails(Guid id)
         {
-            var response = _json.JsonSerialize();
-            var getbyidpatientdetails = response?.FirstOrDefault(x => x.Patientid == id);
+            var response = _json.Jsondeserialize<Patientdetails>();
+            var getbyidpatientdetails = response.FirstOrDefault(x => x.Patientid == id);
             return getbyidpatientdetails;
         }
         public string TokenGenerations(TokenGeneration tokenGeneration)
